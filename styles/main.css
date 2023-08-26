@@ -31,9 +31,12 @@
   color: gray;
 }
 .main .subjects__list .subject-card .info {
-  overflow: hidden;
-  max-height: 0;
   transition: all 0.3s ease;
+  display: grid;
+  grid-template-rows: 0fr;
+}
+.main .subjects__list .subject-card .info .info-anim {
+  overflow: hidden;
 }
 .main .subjects__list .subject-card .info .proffesors {
   display: flex;
@@ -44,7 +47,7 @@
   text-align: center;
   width: 100%;
 }
-.main .subjects__list .subject-card:hover .info {
+.main .subjects__list .subject-card.active .info {
   margin: 1.2rem 0 0;
-  max-height: none;
+  grid-template-rows: 1fr;
 }

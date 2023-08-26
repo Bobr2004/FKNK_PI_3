@@ -37,9 +37,17 @@
             }
 
             .info {
-                overflow: hidden;
-                max-height: 0;
                 transition: all 0.3s ease;
+
+
+                // <height animation
+                display: grid;
+                grid-template-rows: 0fr;
+                .info-anim {
+                    overflow: hidden;
+                }
+                // height animation>
+
 
                 .proffesors {
                     display: flex;
@@ -56,11 +64,10 @@
 
 
 
-            &:hover {
+            &.active {
                 .info {
                     margin: 1.2rem 0 0;
-                    // transition: 0.3s ease;
-                    max-height: none;
+                    grid-template-rows: 1fr;
                 }
             }
 
