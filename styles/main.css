@@ -15,19 +15,26 @@
 .main h2 {
   text-align: center;
   font-weight: 700;
-  margin: 0 0 1.2rem;
 }
 .main .subjects__list .subject-card {
+  margin: 1.2rem 0 0;
+  cursor: pointer;
   transition: all 0.3s ease;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 12px;
   padding: 0.8rem 1.6rem;
+}
+.main .subjects__list .subject-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 .main .subjects__list .subject-card > section {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
 }
 .main .subjects__list .subject-card > section p {
+  font-family: "Roboto", sans-serif;
   color: gray;
 }
 .main .subjects__list .subject-card .info {
@@ -41,8 +48,46 @@
 .main .subjects__list .subject-card .info .proffesors {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+.main .subjects__list .subject-card .info .proffesors .proffesor {
+  margin: 0.3rem 0 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.main .subjects__list .subject-card .info .proffesors .proffesor div {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.main .subjects__list .subject-card .info .proffesors .proffesor .stat {
+  font-size: 0.8em;
+  padding: 0.2em;
+  display: flex;
+}
+.main .subjects__list .subject-card .info .proffesors .proffesor p {
+  width: 200px;
+  font-size: 0.8em;
+  color: gray;
+  font-family: "Roboto", sans-serif;
+}
+.main .subjects__list .subject-card .info .proffesors img {
+  display: none;
+  height: 150px;
+  width: 120px;
+  border-radius: 8px;
+}
+.main .subjects__list .subject-card .info .proffesors h4 {
+  text-align: center;
+}
+.main .subjects__list .subject-card .info .proffesors .practice {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 .main .subjects__list .subject-card .info a {
+  margin: 1.2rem 0 0;
   display: block;
   text-align: center;
   width: 100%;
@@ -50,4 +95,10 @@
 .main .subjects__list .subject-card.active .info {
   margin: 1.2rem 0 0;
   grid-template-rows: 1fr;
+}
+
+@media (max-width: 600px) {
+  .subject-card > section {
+    flex-direction: column;
+  }
 }
